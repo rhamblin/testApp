@@ -10,7 +10,8 @@
         >
         <activity
             android:name=".MainActivity"
-            android:label="Activity1">
+            android:label="Activity1"
+            android:screenOrientation="portrait">
             android:label = "Activity1"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity2"
-                  android:label = "Activity2"></activity>
+                  android:label = "Activity2"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

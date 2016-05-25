@@ -11,6 +11,7 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,8 +63,23 @@ public class Activity2 extends Activity {
         tx.setText(Integer.toString(temp));
     }
 
-    public void makeTable() {
-
+    public void onClickClear(View view) {
+        GlobalVar.setCounter(0);
+        TextView tx = (TextView) findViewById(R.id.answer);
+        tx.setText(Integer.toString(GlobalVar.getCounter().count));
+     }
+    public void onClickSave(View view) {
+       GlobalVar.saveState(this);
     }
+
+    public void onClickHOME(View view) {
+        Intent intent = new Intent(this, MainActivity.class) ;
+        startActivity(intent);
+    }
+     @Override
+   public void onPause() {
+        super.onPause();
+           GlobalVar.saveState(this);
+   }
 
 }

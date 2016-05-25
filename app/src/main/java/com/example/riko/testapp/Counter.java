@@ -1,9 +1,11 @@
 package com.example.riko.testapp;
 
+import java.io.Serializable;
+
 /**
  * Created by Riko on 2016-05-20.
  */
-public class Counter {
+public class Counter implements Serializable{
 
     int count;
 
