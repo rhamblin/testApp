@@ -39,7 +39,7 @@ public class MainActivity extends Activity{
 
 
     public void onClick(View view){
-        Intent intent = new Intent(MainActivity.this, Activity2.class) ;
+        Intent intent = new Intent(this, Activity2.class) ;
 
 
         EditText editText = (EditText) findViewById(R.id.editText);

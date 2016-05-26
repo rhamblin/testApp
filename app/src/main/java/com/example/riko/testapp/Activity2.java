@@ -11,6 +11,8 @@ import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +78,18 @@ public class Activity2 extends Activity {
         Intent intent = new Intent(this, MainActivity.class) ;
         startActivity(intent);
     }
+
+    public void onClickNewButton(View view) {
+
+
+    }
+
+    public void onClickGame(View view) {
+        setContentView(R.layout.secondarylayout);
+        TextView tx = (TextView) findViewById(R.id.button);
+        tx.setText("Hey!");
+    }
+
      @Override
    public void onPause() {
         super.onPause();

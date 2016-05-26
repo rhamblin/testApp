@@ -39,7 +39,7 @@ public class GlobalVar implements Serializable{
     static public void saveState(Context context) {
         FileOutputStream outStream = null;
         try {
-            File f = new File(context.getFilesDir(), File.separator +"data6.dat");
+            File f = new File(context.getFilesDir(), File.separator +"data12.dat");
             outStream =  new FileOutputStream(f);
             ObjectOutputStream objectOutStream = new ObjectOutputStream(outStream);
 
@@ -49,49 +49,36 @@ public class GlobalVar implements Serializable{
         } catch (FileNotFoundException e1) {
             // e1.printStackTrace();
         } catch (IOException e1) {
-           // e1.printStackTrace();
+            // e1.printStackTrace();
         }
 
     }
+
     static public void loadState(Context context) throws IOException {
         Counter s = null;
         FileInputStream inStream = null;
 
         try {
-            System.out.println("error");
+            //commented line is for saving to EXTERNAL card
             // f = new File(Environment.getExternalStorageDirectory(), File.separator + "data.dat");
-            if(f == null ){
-            f =  new File(context.getFilesDir(), File.separator + "data6.dat");
-            System.out.println("error2");}
+            if(f == null )
+                f =  new File(context.getFilesDir(), File.separator + "data12.dat");
 
-            System.out.println("errorrrrrrrr");
             inStream = new FileInputStream(f);
-            System.out.println("error3");
             ObjectInputStream objectInStream = new ObjectInputStream(inStream);
-            System.out.println("error4");
 
             s = ((Counter) objectInStream.readObject());
-            System.out.println("errorx");
+
             objectInStream.close();
-            System.out.println("errory");
         } catch (IOException e1) {
-            System.out.println("error5");
+
             f.createNewFile();
-            System.out.println("error6");
             GlobalVar.c = new Counter();
-            System.out.println("error7");
-            e1.printStackTrace();
         }catch (ClassNotFoundException e1) {
             f.createNewFile();
             GlobalVar.c = new Counter();
-            e1.printStackTrace();
 
-        } /*catch (FileNotFoundException e1) {
-        button3
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }*/
+        }
         if (s != null)
             GlobalVar.c = s;
         else {
