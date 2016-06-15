@@ -18,6 +18,7 @@ public class testAlarmManager extends AppCompatActivity {
     private TimePicker time;
     private PendingIntent pendingIntent;
     private AlarmManager manager;
+    public int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
