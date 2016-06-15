@@ -61,4 +61,8 @@ public class MainActivity extends Activity{
         }
 
     }
+
+    public void startAlarm (View view) {
+        startActivity(new Intent(this, testAlarmManager.class));
+    }
 }

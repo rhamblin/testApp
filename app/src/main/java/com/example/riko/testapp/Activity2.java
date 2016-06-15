@@ -5,13 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -79,21 +78,10 @@ public class Activity2 extends Activity {
         startActivity(intent);
     }
 
-    public void onClickNewButton(View view) {
-
-
-    }
-
-    public void onClickGame(View view) {
-        setContentView(R.layout.secondarylayout);
-        TextView tx = (TextView) findViewById(R.id.button);
-        tx.setText("Hey!");
-    }
 
      @Override
    public void onPause() {
         super.onPause();
-           GlobalVar.saveState(this);
+         GlobalVar.saveState(this);
    }
-
 }

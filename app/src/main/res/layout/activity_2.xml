@@ -92,12 +92,12 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New View"
+        android:text="TOAST IN 5 SECS"
         android:id="@+id/button5"
-        android:layout_below="@+id/button3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="148dp"
-        android:onClick="onClickGame" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginBottom="122dp"
+        android:onClick="alarm"/>
 
 
 </RelativeLayout>

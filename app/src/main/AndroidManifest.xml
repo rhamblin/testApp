@@ -4,13 +4,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/briefcase"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:label="Tester"
         >
+
         <activity
             android:name=".MainActivity"
-            android:label="Activity1"
+            android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait">
             android:label = "Activity1"
             <intent-filter>
@@ -19,9 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity2"
-                  android:label = "Activity2"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Activity2"
+            android:label="Activity2"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".AlarmReceiver"></receiver>
+        <activity android:name=".testAlarmManager"></activity>
     </application>
 
 </manifest>
